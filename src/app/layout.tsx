@@ -1,11 +1,12 @@
 import './globals.css'
-import type { Metadata } from 'next'
+// eslint-disable-next-line camelcase
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import { ReactNode } from 'react'
+import { Header } from './components/header/header'
 
 const inter = Inter({
   variable: '--font-inter',
-  subsets: ['latin']
+  subsets: ['latin'],
 })
 
 const plexMono = IBM_Plex_Mono({
@@ -14,12 +15,13 @@ const plexMono = IBM_Plex_Mono({
   weight: ['400', '600'],
 })
 
-
-
-export default function RootLayout({ children, }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} ${plexMono.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${plexMono.variable}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
