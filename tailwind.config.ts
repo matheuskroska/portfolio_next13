@@ -12,7 +12,7 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        'hero-image': "url('/images/hero-image.jpg')",
+        'aside-texture': "url('/images/aside_texture.jpg')",
       },
       fontFamily: {
         mono: ['var(--font-plex-mono)', 'monospace'],
