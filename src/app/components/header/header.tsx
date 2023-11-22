@@ -14,6 +14,8 @@ const getData = async (): Promise<Book> => {
   }
   `
 
+  console.log("huehuahuaehu")
+
   return fetchHygraphQuery(query)
 }
 
